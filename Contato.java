@@ -1,17 +1,15 @@
 public class Contato {
 
-   private int codigo;
-   private String nome;
-   private String email;
-   private String telefone;
+    static int numeroDeContas = 0;
 
-   
-   
+    private int codigo;
+    private String nome;
+    private String email;
+    private String telefone;
 
-   public Contato() {
+    public Contato() {
 
     }
-
 
     public Contato(int codigo, String nome, String email, String telefone) {
         this.codigo = codigo;
@@ -20,14 +18,14 @@ public class Contato {
         this.telefone = telefone;
     }
 
-    public void setCodigo(int codigo){
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
 
     }
 
-   public int getCodigo(){
-    return codigo;
-   }
+    public int getCodigo() {
+        return codigo;
+    }
 
     public String getNome() {
         return nome;
@@ -53,6 +51,9 @@ public class Contato {
         this.telefone = telefone;
     }
 
-   
-    
+    @Override
+    public String toString() {
+        return "Contato [codigo=" + codigo + ", email=" + email + ", nome=" + nome + ", telefone=" + telefone + "]";
+    }
+
 }
